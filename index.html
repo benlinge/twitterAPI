@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8" />
+    <title>Lookfantastic | Free Delivery</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/buying-right-now-products-styles.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<div class="body-wrap constraint">
+    <div class="line">
+        <section class="widget-buying-now">
+
+            <header>
+                <h2><span class="bubble">What people are buying right now</span></h2>
+            </header>
+
+            <div class="buying-right-now-content">
+                <ul>
+                    <li class="lineOne">
+                        <a class="active" href="10481950.html"><img  src="http://s4.thcdn.com/productimg/0/130/130/50/10481950-1416231980-531471.jpg" alt="Buying right now"/>
+                        <h3>ghd IV Styler</h3></a>
+                        <a href="11028460.html"><img src="http://s1.thcdn.com/productimg/0/130/130/60/11028460-1414769534-286053.jpg" alt="Buying right now"/>
+                        <h3>Lookfantastic February Beauty Box</h3></a>
+                        <a href="11059760.html"><img src="http://s2.thcdn.com/productimg/0/130/130/60/11059760-1418902414-907211.jpg" alt="Buying right now"/>
+                        <h3>Tangle Teezer Lulu Guinness</h3></a>
+                        <a href="11058314.html"><img src="http://s1.thcdn.com/productimg/0/130/130/14/11058314-1420200876-387750.jpg" alt="Buying right now"/>
+                        <h3>ghd Curve Soft Curl Tong</h3></a>
+                    </li>
+                    <li class="lineTwo">
+                        <a class="active" href="11054382.html"><img src="http://s1.thcdn.com/productimg/0/130/130/82/11054382-1420644343-647811.jpg" alt="Buying right now"/>
+                        <h3>bareMinerals Mineralixir 5-Oil Blend</h3></a>
+                        <a href="10444789.html"><img src="http://s3.thcdn.com/productimg/0/130/130/89/10444789-1416231980-530991.jpg" alt="Buying right now"/>
+                        <h3>Kerastase Elixir Ultime</h3></a>
+                        <a href="11061837.html"><img src="http://s2.thcdn.com/productimg/0/130/130/37/11061837-1421673362-999664.jpg" alt="Buying right now"/>
+                        <h3>Elemis Pro-Collagen Marine Cream</h3></a>
+                        <a href="10524480.html"><img src="http://s1.thcdn.com/productimg/0/130/130/80/10524480-1338997763-992925.jpg" alt="Buying right now"/>
+                        <h3>this works deep sleep pillow spray</h3></a>
+                    </li>
+                    <li class="lineThree">
+                        <a class="active" href="10985297.html"><img src="http://s2.thcdn.com/productimg/0/130/130/97/10985297-1413564125-677471.jpg" alt="Buying right now"/>
+                        <h3>Grow Gorgeous Hair Growth Serum</h3></a>
+                        <a href="10387664.html"><img src="http://s2.thcdn.com/productimg/0/130/130/64/10387664-1423665551-77776.jpg" alt="Buying right now"/>
+                        <h3>Moroccanoil Treatment</h3></a>
+                        <a href="10965728.html"><img src="http://s2.thcdn.com/productimg/0/130/130/28/10965728-1409562263-840038.jpg" alt="Buying right now"/>
+                        <h3>Real Techniques Nics Picks</h3></a>
+                    </li>
+                    <li class="lineFour">
+                        <a class="active" href="10790289.html"><img src="http://s2.thcdn.com/productimg/0/130/130/89/10790289-1407862418-65943.jpg" alt="Buying right now"/>
+                        <h3>Active Gold Collagen</h3></a>
+                        <a href="11052388.html"><img src="http://s3.thcdn.com/productimg/0/130/130/88/11052388-1422197275-172101.jpg" alt="Buying right now"/>
+                        <h3>benefit Puff Off Eye Gel</h3></a>
+                        <a href="10951263.html"><img src="http://s1.thcdn.com/productimg/0/130/130/63/10951263-1398842874-273019.jpg" alt="Buying right now"/>
+                        <h3>GLAMGLOW THIRSTYMUD</h3></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- widget slot5 stop -->
+    <div class="tweet-list">
+        <div id="t-list">
+            <div>
+                <ul id="tweets">
+                </ul>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="submit" onclick="showTweetList('t-list')">#Tweets</button>
+        </div>
+    </div>
+
+    <!-- widget slot6 start -->
+    <section class="widget-trending">
+        <ul class="trending-items hash-count-2">
+            <li class="trend-position-1"><a href="http://www.lookfantastic.com/blog/get-the-look/cargo-cosmetics-oscars-2015/">#Getthelook</a></li>
+            <li class="trend-position-2"><a href="http://www.lookfantastic.com/blog/benefit/benefit-roller-lash-vs-benefit-theyre-real/">#rollerlash</a></li>
+        </ul>
+    </section>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/buying-right-now-products.js"></script>
+<script type="text/javascript">
+        //Onload, runs the twitter search query function
+        $(document).ready(function(){
+            var search_query = {
+                q: 'query'
+            };
+            search(search_query);
+        });
+
+        function search(search_query){
+            //Ajax request
+            $.ajax({
+                //Get request
+                //URL to twitter api php file to handle get data
+                //Data type json
+                type: 'GET',
+                url: 'http://www.ehustudent.co.uk/cis21995575/cis3113/task-3/TwitterAPI.php?' + $.param(search_query),
+                dataType: 'json',
+                //Parameter to store "Statuses" array
+                success: function(data) {
+                    console.dir(data);
+
+                    //Loops through Statuses array to find user name and status text
+                    for (children in data['statuses']) {
+                        //Appends Unordered List with List Items of new data
+                        $('#tweets').append(' <li><span class="user"> @' + data['statuses'][children]['user']['screen_name'] + '</span>: ' + data['statuses'][children]['text'] + ' </li>');
+                    }
+
+                    /* Parsing Links */
+                    //Returns Tweets Unordered List
+                    var linkText = document.getElementById("tweets").innerHTML;
+
+                    //String to replace link text with actual link
+                    String.prototype.urlLink = function () {
+
+                        //Regular expression to find link and replace
+                        return linkText.replace(/(http?:\/\/[^\s]+)/g, function (newLink) {
+                            //Returns regular expression set to hyperlink
+                            return newLink.link(newLink);
+                        });
+                    };
+                    //Sets new hyperlink in place of old link text
+                    document.getElementById("tweets").innerHTML = linkText.urlLink();
+
+                    //Returns Tweets Unordered List
+                    var oldHashtags = document.getElementById("tweets").innerHTML;
+
+                    //String to replace hashtag text with actual link
+                    String.prototype.hashtagLink = function () {
+
+                        //Regular expression to find hashtag and replace
+                        return oldHashtags.replace(/[#]+[A-Za-z0-9-_]+/g, function (newHash) {
+                            //set regular expression to variable and replace # with %23 for twitter API to recognise
+                            var twitterHash = newHash.replace("#", "%23");
+                            //Returns variable set to hyperlink
+                            return newHash.link("http://twitter.com/search?q=" + twitterHash);
+                        });
+                    };
+                    //Sets new hyperlink in place of old hashtag text
+                    document.getElementById("tweets").innerHTML = oldHashtags.hashtagLink();
+
+                    //Returns Tweets Unordered List
+                    var oldUsername = document.getElementById("tweets").innerHTML;
+
+                    //String to replace user name text with actual link
+                    String.prototype.usernameLink = function () {
+
+                        //Regular expression to find user name and replace
+                        return oldUsername.replace(/[@]+[A-Za-z0-9-_]+/g, function (newUsername) {
+                            //set regular expression to variable and replace @ with nothing to link to twitter page
+                            var twitterUsername = newUsername.replace("@", "");
+                            //Returns variable set to hyperlink
+                            return newUsername.link("http://twitter.com/" + twitterUsername);
+                        });
+                    };
+                    //Sets new hyperlink in place of old user name text
+                    document.getElementById("tweets").innerHTML = oldUsername.usernameLink();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
